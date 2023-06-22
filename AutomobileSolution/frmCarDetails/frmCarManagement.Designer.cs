@@ -69,6 +69,7 @@
             this.dgvCarList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCarList.Size = new System.Drawing.Size(823, 255);
             this.dgvCarList.TabIndex = 28;
+            this.dgvCarList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvCarList_CellDoubleClick);
             // 
             // btnDelete
             // 
@@ -211,6 +212,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmCarManagement";
             this.Text = "frmCarManagement";
+            this.Load += new System.EventHandler(this.frmCarManagement_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

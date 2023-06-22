@@ -14,7 +14,7 @@ namespace AutomobileWinApp
             InitializeComponent();
         }
 
-        private void frmCarManagement_Load(object sender, EventArgs e)
+        public void frmCarManagement_Load(object sender, EventArgs e)
         {
             btnDelete.Enabled = false;
             //Register this event to open the frmcarDetails form that performs updating
@@ -144,5 +144,10 @@ namespace AutomobileWinApp
                 MessageBox.Show(ex.Message, "Delete a car");
             }
         }//end btnDelete_Click
+
+        private void frmCarManagement_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }// end Form
 }

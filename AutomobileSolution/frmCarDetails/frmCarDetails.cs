@@ -1,5 +1,7 @@
 using AutomobileLibrary.BussinessObject;
 using AutomobileLibrary.Repository;
+using AutomobileWinApp;
+
 namespace frmCarDetails
 {
     public partial class frmCarDetails : Form
@@ -47,11 +49,14 @@ namespace frmCarDetails
                 {
                     CarRepository.UpdateCar(car);
                 }
+                
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, InsertOrUpdate == false ? "Add a new car" : "Update a car");
             }
+            Close();
+            
         } //end of btnSave_Click
         //-------------------------------------------------------
         private void btnCancel_Click(object sender, EventArgs e) => Close();
